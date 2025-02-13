@@ -47,21 +47,19 @@ const words = [
   "Con",
 ];
 
-console.log(words.reverse().join(" "));
+const pirateSong = words.reverse().join(" ");
+console.log(pirateSong);
 
 let grades: number[];
 grades = [6, 4, 8, 10, 2];
 
-let sortedGrades = grades.toSorted(
+const sortedGrades = grades.toSorted(
   (previousGrade, nextGrade) => previousGrade - nextGrade
 );
 console.log(sortedGrades);
 
-for (const grade of grades) {
-  if (grade >= 5) {
-    console.log(grade);
-  }
-}
+const approvedGrades = grades.filter((grade) => grade >= 5);
+console.log(approvedGrades);
 
 const gradesSum = grades.reduce(
   (previousGrade, nextGrade) => previousGrade + nextGrade
