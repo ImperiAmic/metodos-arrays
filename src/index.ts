@@ -4,9 +4,7 @@ for (let year = 2000; year <= 2025; year++) {
   years.push(year);
 }
 
-console.log("Exercici 1 - Años");
 console.log(years);
-console.log("\n");
 
 const words = [
   "confín.",
@@ -49,30 +47,30 @@ const words = [
   "Con",
 ];
 
-console.log(`Exercisi 2 - Words
-${words.reverse().join(" ")}\n`);
+console.log(words.reverse().join(" "));
 
 let grades: number[];
 grades = [6, 4, 8, 10, 2];
 
-let sortedGradesList = grades.toSorted((a, b) => a - b);
-console.log("Exercici 3 - Notas");
-console.log(sortedGradesList);
+let sortedGrades = grades.toSorted(
+  (previousGrade, nextGrade) => previousGrade - nextGrade
+);
+console.log(sortedGrades);
 
-console.log("Notes aprobades:");
 for (const grade of grades) {
   if (grade >= 5) {
     console.log(grade);
   }
 }
 
-const gradesSum = grades.reduce((previous, next) => previous + next);
+const gradesSum = grades.reduce(
+  (previousGrade, nextGrade) => previousGrade + nextGrade
+);
 const gradesAverage = gradesSum / grades.length;
 
-console.log(`Nota mitjana: ${gradesAverage}`);
+console.log(gradesAverage);
 
 const maximumGrade = Math.max(...grades);
 const minimumGrade = Math.min(...grades);
 
-console.log(`Nota màxima: ${maximumGrade}
-Nota mínima: ${minimumGrade}`);
+console.log(`${maximumGrade}, ${minimumGrade}`);
